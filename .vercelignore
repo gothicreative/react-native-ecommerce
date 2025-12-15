@@ -1,0 +1,6 @@
+# Ignore everything except the admin folder
+*/
+!admin/
+
+# Ignore node_modules in admin (will be installed by Vercel)
+admin/node_modules/
