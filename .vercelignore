@@ -4,11 +4,6 @@ admin/node_modules/
 backend/node_modules/
 mobile/node_modules/
 
-# Build outputs
-admin/dist/
-backend/dist/
-mobile/dist/
-
 # Logs
 *.log
 
@@ -116,3 +111,6 @@ dist/
 */
 !admin/
 !admin/**
+
+# But don't ignore the admin dist folder as that's what we want to deploy
+!admin/dist/
