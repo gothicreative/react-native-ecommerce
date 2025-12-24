@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix admin && npm run build --prefix admin",
+    "build": "npm install --prefix backend && npm install --prefix admin && npm run build --prefix admin",
     "start": "npm run start --prefix backend"
   },
   "repository": {
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/gothicreative/react-native-ecommerce/issues"
   },
-  "homepage": "https://github.com/gothicreative/react-native-ecommerce#readme"
+  "homepage": "https://github.com/gothicreative/react-native-ecommerce#readme",
+  "dependencies": {
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^9.0.2"
+  }
 }
