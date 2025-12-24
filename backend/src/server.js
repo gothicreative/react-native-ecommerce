@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { clerkMiddleware } from '@clerk/express'
 import {serve} from 'inngest/express'
-import { inngest, functions } from './config/inngest.js';
+import {  functions, inngest } from './config/inngest.js';
 import { ENV } from './config/env.js';
 import { connectDB } from './config/db.js';
 
