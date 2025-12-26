@@ -1,3 +1,4 @@
+// Inngest functionality disabled as requested
 import {Inngest} from "inngest";
 import {connectDB} from "./db.js";
 import {User} from "../models/user.model.js";
@@ -37,3 +38,6 @@ const deleteUserFromDB = inngest.createFunction(
 );
 
 export const functions = {syncUser, deleteUserFromDB};
+
+// Clerk-only implementation would go here if needed
+// Currently using direct API calls as implemented in server.js
