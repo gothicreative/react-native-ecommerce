@@ -1,0 +1,21 @@
+import {Router} from 'express'
+import { createProduct, getAllProduct, updateProduct, getAllOrders, updateOrderStatus, getAllCustomers, getDashboardStatus } from '../controllers/admin.controller.js'
+import {protectRoute, onlyAdmin} from '../middleware/auth.middleware.js'
+import { upload } from '../middleware/multer.middleware.js'
+
+
+const router = Router()
+
+router.use(protectRoute, onlyAdmin)
+
+router.post('/products',upload.array('images', 3), createProduct)
+router.get('/products',  getAllProduct)
+router.put('/products/:id', upload.array('images', 3), updateProduct)
+
+router.get('/orders', getAllOrders)
+router.patch('/orders/:orderId/status', updateOrderStatus)
+
+router.get('/customers', getAllCustomers)
+router.get('/stats', getDashboardStatus)
+
+export default router
